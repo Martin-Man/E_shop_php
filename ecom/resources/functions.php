@@ -39,6 +39,7 @@ return header("Location: $location ");
 function query($sql) {
 global $connection;
 return mysqli_query($connection, $sql);
+	echo "Connected successfully<br>";
 }
 
 
