@@ -16,13 +16,14 @@ foreach ($_SERVER as $key => $value) {
     $username = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
     $password = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
-defined("DB_HOST") ? null : define("DB_HOST", "localhost");
-defined("DB_USER") ? null : define("DB_USER","root");
-defined("DB_PASS") ? null : define("DB_PASS", "");
-defined("DB_NAME") ? null : define("DB_NAME",  "ecom_db");
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "ecom_db";
+//defined("DB_NAME") ? null : define("DB_NAME",  "ecom_db");
 //defined("DB_NAME") ? null : define("DB_NAME",  "ecom2");
 
-$connection = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+$connection = mysqli_connect($servername, $username, $password, $dbname);
 
 require_once("functions.php");
 require_once("cart.php");
