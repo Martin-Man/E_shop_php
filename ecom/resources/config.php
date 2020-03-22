@@ -6,7 +6,16 @@ defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
 
 defined("TEMPLATE_FRONT") ? null : define("TEMPLATE_FRONT", __DIR__ . DS . "templates/front");
 defined("TEMPLATE_BACK") ? null : define("TEMPLATE_BACK", __DIR__ . DS . "templates/back");
+foreach ($_SERVER as $key => $value) {
+    if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
+        continue;
+    }
 
+    $servername = preg_replace("/^.*Data Source=(.+?);.*$/", "\\1", $value);
+    $dbname = preg_replace("/^.*Database=(.+?);.*$/", "\\1", $value);
+    $username = preg_replace("/^.*User Id=(.+?);.*$/", "\\1", $value);
+    $password = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
+}
 defined("DB_HOST") ? null : define("DB_HOST", "localhost");
 defined("DB_USER") ? null : define("DB_USER","root");
 defined("DB_PASS") ? null : define("DB_PASS", "");
