@@ -1,3 +1,3 @@
 <?php 
-header("Location: ecom/public/index.php");
+header("Location: PHPWebProject1/index.php");
  ?>
