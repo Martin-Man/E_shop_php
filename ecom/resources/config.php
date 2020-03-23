@@ -24,6 +24,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Error No.".$conn->connect_errno." - Unable to connect to MySQL: ".$conn->connect_error);
 }
+echo "$dbname";
 
 
 defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
