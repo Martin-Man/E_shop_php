@@ -1,15 +1,10 @@
 <?php
-ob_start();
-session_start();
+
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "ecom_db";
 
-defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
-
-defined("TEMPLATE_FRONT") ? null : define("TEMPLATE_FRONT", __DIR__ . DS . "templates/front");
-defined("TEMPLATE_BACK") ? null : define("TEMPLATE_BACK", __DIR__ . DS . "templates/back");
 
 foreach ($_SERVER as $key => $value) {
     if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
@@ -24,9 +19,16 @@ foreach ($_SERVER as $key => $value) {
 
 //defined("DB_NAME") ? null : define("DB_NAME",  "ecom_db");
 //defined("DB_NAME") ? null : define("DB_NAME",  "ecom2");
-$connection = new mysqli($servername, $username, $password, $dbname);
+$conn = $connection = new mysqli($servername, $username, $password, $dbname);
+//$connection = new mysqli($servername, $username, $password, $dbname);
 //$connection = mysqli_connect($servername, $username, $password, $dbname);
 
+
+
+defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
+
+defined("TEMPLATE_FRONT") ? null : define("TEMPLATE_FRONT", __DIR__ . DS . "templates/front");
+defined("TEMPLATE_BACK") ? null : define("TEMPLATE_BACK", __DIR__ . DS . "templates/back");
 require_once("functions.php");
 require_once("cart.php");
 ?>
