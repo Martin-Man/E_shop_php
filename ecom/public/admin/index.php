@@ -9,7 +9,7 @@
 
 //redirect("../../public/index.php");
 
-}
+//}
 
 
  ?>
