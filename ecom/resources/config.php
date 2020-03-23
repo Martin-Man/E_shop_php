@@ -1,9 +1,4 @@
 
-
-//$servername = "localhost";
-//$username = "root";
-//$password = "";
-//$dbname = "localdb";
 <?php
 ob_start();
 session_start();
