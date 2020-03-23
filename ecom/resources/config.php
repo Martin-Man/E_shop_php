@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "localdb";
+$dbname = "ecom_db";
 
 
 foreach ($_SERVER as $key => $value) {
