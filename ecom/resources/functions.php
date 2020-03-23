@@ -278,7 +278,7 @@ if(isset($_POST['submit'])){
 $username = escape_string($_POST['username']);
 $password = escape_string($_POST['password']);
 
-$query = query("SELECT * FROM users WHERE username = '{$username}' AND password = '{$password }' ");
+$query = query("SELECT * FROM users WHERE username = '{$username}' AND password = '{$password}' ");
 confirm($query);
 
 if(mysqli_num_rows($query) == 0) {
