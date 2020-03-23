@@ -3,9 +3,9 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "localdb";
+$dbname = "ecom_db";
 
-
+// Connect to AZURE MySQL in App database
 foreach ($_SERVER as $key => $value) {
     if (strpos($key, "MYSQLCONNSTR_localdb") !== 0) {
         continue;
@@ -17,12 +17,13 @@ foreach ($_SERVER as $key => $value) {
     $password = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
 
-//defined("DB_NAME") ? null : define("DB_NAME",  "ecom_db");
-//defined("DB_NAME") ? null : define("DB_NAME",  "ecom2");
-$conn = $connection = new mysqli($servername, $username, $password, $dbname);
-//$connection = new mysqli($servername, $username, $password, $dbname);
-//$connection = mysqli_connect($servername, $username, $password, $dbname);
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
 
+// Check connection
+if ($conn->connect_error) {
+    die("Error No.".$conn->connect_errno." - Unable to connect to MySQL: ".$conn->connect_error);
+}
 
 
 defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
