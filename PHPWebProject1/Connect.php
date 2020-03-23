@@ -25,6 +25,6 @@ if ($conn->connect_error) {
     die("Error No.".$conn->connect_errno." - Unable to connect to MySQL: ".$conn->connect_error);
 }
 echo "Connected successfully<br>";
-
+echo "$dbname<br>";
 //$conn->close();
 ?>
