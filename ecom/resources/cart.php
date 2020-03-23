@@ -48,9 +48,8 @@ require_once("config.php");
 
 function cart() {
 
-$product_title = 0;
-
-$total = 0;
+$product_title= 0;
+$total = $product_title = 0;
 $item_quantity = 0;
 $item_name = 1;
 $item_number =1;
