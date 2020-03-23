@@ -18,14 +18,14 @@ foreach ($_SERVER as $key => $value) {
 }
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = $connection = new mysqli($servername, $username, $password, $dbname);
 
 // Check connection
 if ($conn->connect_error) {
     die("Error No.".$conn->connect_errno." - Unable to connect to MySQL: ".$conn->connect_error);
 }
 echo "$dbname";
-$conn = $connection;
+
 
 defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
 
