@@ -288,7 +288,7 @@ redirect("login.php");
 
 } else {
 $_SESSION['username'] = $username;
-redirect("admin");
+redirect("admin/index.php");
          }
     }
 }
