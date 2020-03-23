@@ -1,8 +1,6 @@
 <?php
 require_once("config.php");
-?>
 
-<?php 
   if(isset($_GET['add'])) {
 
     $query = query("SELECT * FROM products WHERE product_id=" . escape_string($_GET['add']). " ");
@@ -198,24 +196,5 @@ function process_transaction() {
         redirect("thank_you.php");
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
  ?>
