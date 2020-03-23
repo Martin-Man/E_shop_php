@@ -3,7 +3,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "ecom_db";
+$dbname = "localdb";
 
 // Connect to AZURE MySQL in App database
 foreach ($_SERVER as $key => $value) {
