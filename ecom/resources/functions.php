@@ -186,7 +186,7 @@ $product = <<<DELIMETER
             <h4 class="pull-right">&#36;{$row['product_price']}</h4>
             <h4><a href="item.php?id={$row['product_id']}">{$row['product_title']}</a>
             </h4>
-            <p>See more snippets like this online store item at <a target="_blank" href="http://www.bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
+            <p>{$row['short_desc']}</p>
              <a class="btn btn-primary" target="_blank" href="../resources/cart.php?add={$row['product_id']}">Kúpiť !</a>
         </div>       
     </div>
