@@ -3,7 +3,7 @@
 <?php include(TEMPLATE_BACK . "/header.php"); ?>
 
 <?php 
-
+echo ($_SESSION['username']);
 if(!isset($_SESSION['username'])) {
 
 
