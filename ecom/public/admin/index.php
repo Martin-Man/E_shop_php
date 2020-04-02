@@ -7,7 +7,7 @@
 if(!isset($_SESSION['username'])) {
 
 
-redirect("../../public/index.php");
+//redirect("../../public/index.php");
 
 }
 
