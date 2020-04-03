@@ -4,6 +4,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
+$dbname = "localdb";
 
 defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
 
@@ -29,6 +30,7 @@ foreach ($_SERVER as $key => $value) {
 }
 
 $connection = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
+$connection = new mysqli($servername, $username, $password, $dbname);
 
 require_once("functions.php");
 require_once("cart.php");
