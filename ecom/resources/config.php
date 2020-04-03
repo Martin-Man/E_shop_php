@@ -1,9 +1,17 @@
 <?php
+ob_start();
+session_start();
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "localdb";
+defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
+
+defined("TEMPLATE_FRONT") ? null : define("TEMPLATE_FRONT", __DIR__ . DS . "templates/front");
+defined("TEMPLATE_BACK") ? null : define("TEMPLATE_BACK", __DIR__ . DS . "templates/back");
+
+defined("DB_HOST") ? null : define("DB_HOST", "localhost");
+defined("DB_USER") ? null : define("DB_USER","root");
+defined("DB_PASS") ? null : define("DB_PASS", "");
+defined("DB_NAME") ? null : define("DB_NAME",  "ecom_db");
+//defined("DB_NAME") ? null : define("DB_NAME",  "ecom2");
 
 // Connect to AZURE MySQL in App database
 foreach ($_SERVER as $key => $value) {
@@ -17,20 +25,8 @@ foreach ($_SERVER as $key => $value) {
     $password = preg_replace("/^.*Password=(.+?)$/", "\\1", $value);
 }
 
-// Create connection
-$conn = $connection = new mysqli($servername, $username, $password, $dbname);
+$connection = mysqli_connect(DB_HOST,DB_USER,DB_PASS,DB_NAME);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Error No.".$conn->connect_errno." - Unable to connect to MySQL: ".$conn->connect_error);
-}
-
-
-
-defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
-
-defined("TEMPLATE_FRONT") ? null : define("TEMPLATE_FRONT", __DIR__ . DS . "templates/front");
-defined("TEMPLATE_BACK") ? null : define("TEMPLATE_BACK", __DIR__ . DS . "templates/back");
 require_once("functions.php");
 require_once("cart.php");
 ?>
