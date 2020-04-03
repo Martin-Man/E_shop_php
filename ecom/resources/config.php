@@ -1,6 +1,9 @@
 <?php
 ob_start();
 session_start();
+$servername = "localhost";
+$username = "root";
+$password = "";
 
 defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
 
