@@ -42,7 +42,7 @@ while($row = fetch_array($query)):
     <div class="caption-full">
         <h4><a href="#"><?php echo $row['product_title']; ?></a> </h4>
         <hr>
-        <h4 class=""><?php echo "&#36;" . $row['product_price']; ?></h4>
+        <h4 class=""><?php echo $row['product_price'] . " &euro;"; ?></h4>
 
     <div class="ratings">
      
@@ -97,7 +97,7 @@ while($row = fetch_array($query)):
 
 <p></p>
 
-<p><?php echo $row['product_description']; ?></p>
+<p style="text-align:justify"><?php echo $row['product_description']; ?></p>
     </div>
     <div role="tabpanel" class="tab-pane" id="profile">
 

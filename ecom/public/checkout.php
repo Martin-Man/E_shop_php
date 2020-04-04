@@ -11,6 +11,8 @@
 <div class="row">
       <h4 class="text-center bg-danger"><?php display_message(); ?></h4>
       <h1>Pokladňa</h1>
+
+        <!-- odosielanie do thank_you.php-->
 <form action="" method="post">
 
 
@@ -84,7 +86,7 @@ assasssaaasasas<br />
         <?php
 
 echo mt_rand(5, 15);
-?>
+        ?>
                 -->
         <br />
 <!--form address-->
@@ -150,7 +152,7 @@ echo mt_rand(5, 15);
         </div>
 
 
-<input type="submit" name="submit" formaction="thank_you.php">
+<input type="submit" name="submit" formaction="thank_you.php"> <!-- odosielanie do thank_you.php-->
 
 </form>
 

@@ -17,7 +17,7 @@ process_transaction();
     <!-- Page Content -->
     <div class="container">
         
-      <h1 class="text-center">THANK YOU</h1>
+      <h1 class="text-center">Ďakujeme za objednávku</h1>
 
 
     </div>

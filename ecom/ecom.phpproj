@@ -27,6 +27,8 @@
     <Compile Include="public\shop.php" />
     <Compile Include="public\thank_you.php" />
     <Compile Include="resources\cart.php" />
+    <Compile Include="resources\config.php" />
+    <Compile Include="resources\functions.php" />
     <Compile Include="resources\templates\back\add_product.php" />
     <Compile Include="resources\templates\back\add_user.php" />
     <Compile Include="resources\templates\back\admin_content.php" />
@@ -50,13 +52,12 @@
     <Compile Include="resources\templates\back\users.php" />
     <Compile Include="resources\templates\front\footer.php" />
     <Compile Include="resources\templates\front\header.php" />
-    <Compile Include="resources\functions.php" />
-    <Compile Include="resources\config.php" />
     <Compile Include="resources\templates\front\side_nav.php" />
     <Compile Include="resources\templates\front\slider.php" />
     <Compile Include="resources\templates\front\top_nav.php" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="public\" />
     <Folder Include="public\admin\" />
     <Folder Include="public\admin\css\" />
     <Folder Include="public\admin\css\plugins\" />
@@ -74,10 +75,9 @@
     <Folder Include="public\fonts\" />
     <Folder Include="public\js\" />
     <Folder Include="resources\" />
-    <Folder Include="public\" />
+    <Folder Include="resources\templates\" />
     <Folder Include="resources\templates\back\" />
     <Folder Include="resources\templates\front\" />
-    <Folder Include="resources\templates\" />
     <Folder Include="resources\uploads\" />
   </ItemGroup>
   <ItemGroup>
@@ -156,11 +156,33 @@
     <Content Include="public\js\bootstrap.js" />
     <Content Include="public\js\bootstrap.min.js" />
     <Content Include="public\js\jquery.js" />
-    <Content Include="resources\uploads\image_1.jpg" />
-    <Content Include="resources\uploads\image_2.jpg" />
-    <Content Include="resources\uploads\image_3.jpg" />
-    <Content Include="resources\uploads\image_4.jpg" />
-    <Content Include="resources\uploads\image_5.jpg" />
+    <Content Include="resources\uploads\1-2_premium_rd.jpg" />
+    <Content Include="resources\uploads\16-kazetovy_zv_pr.jpg" />
+    <Content Include="resources\uploads\1_premium_rd.jpg" />
+    <Content Include="resources\uploads\2-ramikov_tg.jpg" />
+    <Content Include="resources\uploads\20-polramik_rd.jpg" />
+    <Content Include="resources\uploads\2_2-ramikov_tg.jpg" />
+    <Content Include="resources\uploads\2_3-ramikov_tg.jpg" />
+    <Content Include="resources\uploads\3-ramikov_tg.jpg" />
+    <Content Include="resources\uploads\3_2-ramikov_tg.jpg" />
+    <Content Include="resources\uploads\3_3-ramikov_tg.jpg" />
+    <Content Include="resources\uploads\3_4-ramikov_tg.jpg" />
+    <Content Include="resources\uploads\3_5-ramikov_tg.jpg" />
+    <Content Include="resources\uploads\3_6-ramikov_tg.jpg" />
+    <Content Include="resources\uploads\4-kazeta_zv.jpg" />
+    <Content Include="resources\uploads\4_2-kazeta_zv.jpg" />
+    <Content Include="resources\uploads\4_3-kazeta_zv.jpg" />
+    <Content Include="resources\uploads\4_4-kazeta_zv.jpg" />
+    <Content Include="resources\uploads\6_1-kazeta_zv.jpg" />
+    <Content Include="resources\uploads\6_2-kazeta_zv.jpg" />
+    <Content Include="resources\uploads\6_3-kazeta_zv.jpg" />
+    <Content Include="resources\uploads\6_4-kazeta_zv.jpg" />
+    <Content Include="resources\uploads\kazeta.jpg" />
+    <Content Include="resources\uploads\plexisklo.jpg" />
     <Content Include="resources\uploads\produkt1.jpg" />
+    <Content Include="resources\uploads\pruzina.jpg" />
+    <Content Include="resources\uploads\slider1.jpg" />
+    <Content Include="resources\uploads\slider2.jpg" />
+    <Content Include="resources\uploads\slider3.jpg" />
   </ItemGroup>
 </Project>

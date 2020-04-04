@@ -36,8 +36,8 @@ require_once("config.php");
       redirect("../public/checkout.php");
      }
   }
-  
- if(isset($_GET['delete'])) { 
+
+ if(isset($_GET['delete'])) {
 
   $_SESSION['product_' . $_GET['delete']] = '0';
   unset($_SESSION['item_total']);
@@ -48,8 +48,10 @@ require_once("config.php");
 
 function cart() {
 
-$product_title= 0;
-$total = $product_title = 0;
+
+
+$total = 0;
+$product_title = 0;
 $item_quantity = 0;
 $item_name = 1;
 $item_number =1;
@@ -85,9 +87,9 @@ $product = <<<DELIMETER
   <img width='100' src='../resources/{$product_image}'>
 
   </td>
-  <td>&#36;{$row['product_price']}</td>
+  <td>{$row['product_price']} &euro;</td>
   <td>{$value}</td>
-  <td>&#36;{$sub}</td>
+  <td>{$sub} &euro;</td>
   <td><a class='btn btn-warning' href="../resources/cart.php?remove={$row['product_id']}"><span class='glyphicon glyphicon-minus'></span></a>   <a class='btn btn-success' href="../resources/cart.php?add={$row['product_id']}"><span class='glyphicon glyphicon-plus'></span></a>
 <a class='btn btn-danger' href="../resources/cart.php?delete={$row['product_id']}"><span class='glyphicon glyphicon-remove'></span></a></td>
   </tr>
@@ -108,7 +110,7 @@ $quantity++;
 
     $_SESSION['item_total'] = $total += $sub;
     $_SESSION['item_quantity'] = $item_quantity;
-    
+
    // $_SESSION['product_title'] = $product_title;
 }
            }
@@ -137,13 +139,13 @@ $quantity++;
  // }
 
 //}
-
+// použite¾ne len ak ide paypal --- použivam v thank_you.php
 function process_transaction() {
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $Name = $Surname = $Company = $Street = "";
         $Zip_code = $City = $Phone = $Email = "";
-        
+
         $total = $product_price = $Company = 0;
         $item_quantity = 0;
 
@@ -166,7 +168,7 @@ function process_transaction() {
 
                     $send_order = query("INSERT INTO orders (Name, Surname, Company, Street, Zip_code, City, Phone,  Email) VALUES('{$Name}', '{$Surname}','{$Company}','{$Street}','{$Zip_code}', '{$City}','{$Phone}','{$Email}')");
                     $last_id =last_id();
-                    confirm($send_order);                    
+                    confirm($send_order);
 
                     $query = query("SELECT * FROM products WHERE product_id = " . escape_string($id). " ");
                     confirm($query);
@@ -196,4 +198,4 @@ function process_transaction() {
     }
 }
 
- ?>
+?>

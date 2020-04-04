@@ -41,7 +41,7 @@
 
 <hr>
 
-<h1>Slides Available</h1>
+<h1>Dostupné snímky</h1>
 
 <div class="row">  
 
