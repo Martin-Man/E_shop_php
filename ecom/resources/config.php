@@ -4,8 +4,7 @@ session_start();
 $servername = "localhost";
 $username = "root";
 $password = "";
-//$dbname = "ecom2";
-$dbname = "ecom_db";
+$dbname = "ecom2";
 
 defined("DS") ? null : define("DS", DIRECTORY_SEPARATOR);
 
